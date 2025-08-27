@@ -1,0 +1,653 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+        }
+
+        .top {
+            background-color: rgb(119, 119, 119);
+            font-weight: 550;
+            text-align: right;
+            padding-right: 70px;
+        }
+
+        .top span {
+            padding-left: 30px;
+            cursor: pointer;
+        }
+
+        .name {
+            font-size: 40px;
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        ul li {
+            list-style: none;
+            padding-left: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        ul {
+
+            display: flex;
+            /* background-image: linear-gradient(to left, #585c5f, #595b5c, #585c5f); */
+            height: 20px;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        .img_1st {
+            width: 94%;
+            height: 400px;
+            margin-left: 3%;
+        }
+
+        .bestDeal {
+            margin-top: -10px;
+            text-align: center;
+            font-size: 25px;
+            color: rgb(246, 69, 69);
+        }
+
+        .txt,
+        .txt1,
+        .txt2,
+        .txt3 {
+            width: 100%;
+            height: 50px;
+            background-image: linear-gradient(to right, #85efd0, #a5e247, #f3e78e);
+            text-align: center;
+            font-size: 45px;
+            word-spacing: 10px;
+            letter-spacing: 3px;
+            font-weight: bolder;
+            color: black;
+        }
+
+        #demo {
+            margin-top: -20px;
+
+        }
+
+        /* ---------------- */
+        .wrapper {
+            width: 94%;
+            height: 550px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border-radius: 10px;
+            margin-left: 3%;
+        }
+
+        .wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-size: 200% 100%;
+            background-position-x: 180%;
+            animation: 1s loading ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            to {
+                background-position-x: -20%;
+            }
+        }
+
+        .offer .man,
+        .offer .woman,
+        .offer .kids,
+        .offer .acce {
+            width: 250px;
+            height: 450px;
+            background-image: linear-gradient(to right, #202125, #53575a, #4c4d4f);
+            color: #c0c0c0;
+            text-align: center;
+            margin-left: 3%;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+            position: absolute;
+            box-shadow: 8px 8px 8px rgba(70, 66, 66, 0.733);
+        }
+
+        .offer .man img,
+        .offer .woman img,
+        .offer .kids img,
+        .offer .acce img {
+            margin-top: 20px;
+            width: 200px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .button {
+            width: 180px;
+            height: 30px;
+            border: 1px solid wheat;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bolder;
+            margin-left: 35px;
+            border-radius: 8px;
+            padding-bottom: 8px;
+            cursor: pointer;
+            padding-top: 8px;
+        }
+
+        .offer .man .button {
+            height: 38px;
+            padding-top: 0px;
+        }
+
+        .offer .man .button span {
+            width: 30px;
+            height: 30px;
+            font-size: 30px;
+        }
+
+        .offer .woman {
+            background-image: linear-gradient(to right, #10080a, #8a6c64, #d5927d, #3c1b1b);
+            margin-left: 420px;
+            color: #e6e5e5;
+        }
+
+        .offer .kids {
+            background-image: linear-gradient(to right, #e6e5e5, #e9e9e8, #e1e1df);
+            margin-left: 770px;
+            color: #000;
+        }
+
+        .offer .kids .button {
+            border: 1px solid #8a6c64;
+        }
+
+        .offer .acce {
+            background-image: linear-gradient(to right, #f1decf, #a1979b, #c1c0c5);
+            margin-left: 1150px;
+            color: #000;
+        }
+
+        .txt1 {
+            background-image: linear-gradient(to right, #2ad1bf, #58d1a4, #fbd044);
+            position: relative;
+            margin-top: 520px;
+        }
+
+        .txt3 {
+            background-image: linear-gradient(to right, #9d673e, #ab9387, #c0b1a3);
+        }
+
+        /* --------------------------------------- */
+        .low_price {
+            display: table;
+            margin-left: 3%;
+        }
+
+        .pic {
+            width: 225px;
+        }
+
+        .bname {
+            width: 150px;
+            height: 80px;
+            padding-left: 50px;
+            margin-top: -150px;
+        }
+
+        .low_price span,
+        .kids-low span,
+        .trand_pics span {
+            position: absolute;
+            z-index: 0;
+            color: #f6f6f6;
+            width: 225px;
+            height: 70px;
+            background-color: #4c4d4f91;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 267px;
+            
+
+        }
+
+        .kids-low {
+            margin-left: 3%;
+        }
+
+        .kids-pic {
+            width: 221.4px;
+        }
+
+        .kids-low span {
+            width: 221.4px;
+            margin-top: 262.5px;
+        }
+
+        .txt2 {
+            background-image: linear-gradient(to right, #2bcfbe, #34adbd, #4e63bc);
+        }
+
+        price {
+            color: gold;
+            font-size: 25px;
+        }
+
+        .trand_pics {
+            margin-left: 0%;
+            position: relative;
+            
+        }
+
+        .trand_pics span {
+            width: 220px;
+        }
+
+        .tpics {
+            width: 220px;
+            margin-top: 7px;
+        }
+
+        .trand_pics span hamim1 {
+            color: #2bcfbe;
+            font-size: 25px;
+        }
+
+        .cpics {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-left: 3%;
+            padding-top: 40px;
+        }
+
+        .cata-pics span {
+            width: 150px;
+            height: 25px;
+            position: absolute;
+            margin-left: 3%;
+            margin-top: 200px;
+            font-size: 20px;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #dee0dc;
+            height: 400px;
+            margin-top: 50px;
+            color: rgb(83, 74, 74);
+        }
+
+        footer .online ul {
+            background-color: transparent;
+            display: block;
+        }
+
+        footer .online ul li {
+            text-align: left;
+            font-size: 15px;
+        }
+
+        footer .online p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            margin-left: 40px;
+        }
+
+        .ftxt1 {
+            margin-left: 50px;
+            margin-top: 30px;
+            padding-top: 35px;
+        }
+
+        .ftxt2 {
+            margin-left: 350px;
+            margin-top: -125px;
+        }
+
+        .ftxt3 {
+            margin-left: 660px;
+            margin-top: -125px;
+        }
+
+        .ftxt3 span {
+            font-size: 17px;
+            color: #534a4a;
+        }
+        header{
+            background-image: linear-gradient(to left, #585c5f, #595b5c, #585c5f);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <span>Call us on:9382426272 </span>
+        <span> Get Colaburation</span>
+        <span> About Us</span>
+    </div>
+    <div class="name">Clothe's Duniya</div>
+    <header >
+        <ul>
+            <li style="padding-left: 350px; "><a href="" style="color: #fff;">HOME</a></li>
+            <li>|</li>
+            <li><a href="">CATAGORY</a></li>
+            <li>|</li>
+            <li><a href="">LIFESTYELE</a></li>
+            <li>|</li>
+            <li><a href="">ACCESSORIES</a></li>
+            <li>|</li>
+            <li><a href="">ABOUT</a></li>
+            <li>|</li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </header>
+    <img src="Screenshot 2023-06-19 131945.png" alt="" class="img_1st">
+    <div class="bestDeal">
+        <p class="txt">OFFER ZONE</p>
+        <p id="demo"></p>
+    </div>
+    <div class="wrapper">
+        <img src="" alt="" id="image-animate">
+    </div>
+    <div class="offer">
+        <div class="man">
+            <img src="serious-handsome-young-man-sitting-isolated.jpg" alt=""> <br>
+            Mans Fashion <br> <span>Starting at Just 199</span>
+            <p class="button">View All <span>></span></p>
+        </div>
+        <div class="woman">
+            <img src="portrait-stunning-fashionable-woman-sitting-chair.jpg" alt="">
+            Woman's Fashion <br> Starting at Just 149
+            <p class="button">View All <span>></span></p>
+
+        </div>
+        <div class="kids">
+            <img src="full-shot-kids-posing-together.jpg" alt=""> <br>
+            Kids Fashion <br> Starting at Just 99
+            <p class="button">View All <span>></span></p>
+        </div>
+        <div class="acce">
+            <img src="beautiful-pillow-sofa.jpg" alt="">
+            Home Accessories <br> Starting at Just 99
+            <p class="button">View All <span>></span></p>
+        </div>
+    </div>
+    <div class="brands">
+        <p class="txt1">TOP BRANDS AT BEST PRICES</p>
+    </div>
+    <div class="low_price">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">PUMA</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="mahdi-bafande-npyWFYpHQ94-unsplash.jpg" alt="" class="pic">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">ALLEN SOLLY</hamim> <br> Starting at Just <price>499
+            </price>
+        </span>
+        <img src="phil-monte-4V4t0JcOM5E-unsplash.jpg" alt="" class="pic">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">RAYMOND</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="serious-handsome-young-man-sitting-isolated.jpg" alt="" class="pic">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">LEVI'S</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="matas-katinas-7ITfJfAxxY4-unsplash.jpg" alt="" class="pic">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">HRX</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="portrait-stunning-fashionable-woman-sitting-chair.jpg" alt="" class="pic">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">WROGN</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="wassim-chouak-FohxYMt-3d0-unsplash.jpg" alt="" class="pic">
+        <div class="brand_name">
+
+
+        </div>
+    </div>
+    <div class="kids-low">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">PUMA</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="alessandro-rossi-ld8Thc2ryuQ-unsplash.jpg" alt="" class="kids-pic">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">PUMA</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="caleb-shaver-dYX9Iqi3hCc-unsplash.jpg" alt="" class="kids-pic">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">PUMA</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="charlie-garcia-f58bzuQrzpM-unsplash.jpg" alt="" class="kids-pic">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">PUMA</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="fethi-bouhaouchine-auVpR9NBNHk-unsplash.jpg" alt="" class="kids-pic">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">PUMA</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="shayna-douglas-1Jz1Bdzqu0A-unsplash.jpg" alt="" class="kids-pic">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">PUMA</hamim> <br> Starting at Just <price>499</price>
+        </span>
+        <img src="annie-spratt-aRJGeiWYxX8-unsplash.jpg" alt="" class="kids-pic">
+    </div>
+
+    <div class="trand">
+        <p class="txt2">TRENDIEST PICKS</p>
+    </div>
+    <div class="trand_pics">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold; font-size: 19px; ">WEDDING <br> COLLECTION</hamim> <br>
+            <hamim1 style="font-size: 14px;">GET UP-TO <price>30%OFF</price>
+            </hamim1>
+        </span>
+        <img src="arun-prakash-oRqrvUAlt4c-unsplash.jpg" alt="" class="tpics">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">LAHNGA</hamim> <br>
+            <hamim1>Starting at Just <price>999</price>
+            </hamim1>
+        </span>
+        <img src="beautiful-young-woman-wearing-sari.jpg" alt="" class="tpics">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">SHERWANI</hamim> <br>
+            <hamim1 style="font-size: 15PX;">
+                <price>40% </price>OFF ON TOP BRANDS
+            </hamim1>
+        </span>
+        <img src="bulbul-ahmed-p_LzoHuzZck-unsplash.jpg" alt="" class="tpics">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold; font-size: 25px;">CASUAL WEAR</hamim> <br>
+            <hamim1 style="font-size: 19px;">Starting at Just <price>499</price>
+            </hamim1>
+        </span>
+        <img src="woman-posing-floral-dresses-high-heels.jpg" alt="" class="tpics">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">TRADISNAL</hamim> <br>
+            <hamim1 style="font-size: 16px;">GET UP-TO <price>20%OFF</price>
+            </hamim1>
+        </span>
+        <img src="young-man-posing-casually-white-wall.jpg" alt="" class="tpics">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">OFFICE WEAR</hamim> <br>
+            <hamim1>Starting at Just <price>499</price>
+            </hamim1>
+        </span>
+        <img src="serious-handsome-young-man-sitting-isolated.jpg" alt="" class="tpics">
+        <span style=" margin-top: 610px; margin-left: -1340px;">
+            <hamim style="font-size: 23px;  font-weight: bold; ">WINTER WEAR</hamim> <br>
+            <hamim1>Starting at Just <price>399</price>
+            </hamim1>
+        </span> <br>
+        <img src="wassim-chouak-FohxYMt-3d0-unsplash.jpg" alt="" class="tpics">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">SAREES</hamim> <br>
+            <hamim1>Starting at Just <price>899</price>
+            </hamim1>
+        </span>
+        <img src="young-woman-posing-while-wearing-traditional-sari-garment.jpg" alt="" class="tpics">
+        <span>
+            <hamim style="font-size: 25px;  font-weight: bold; ">KIDS WEAR</hamim> <br>
+            <hamim1>Starting at Just <price>499</price>
+            </hamim1>
+        </span>
+        <img src="full-shot-kids-posing-together.jpg" alt="" class="tpics">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">PARTY WEAR</hamim> <br>
+            <hamim1>Starting at Just <price>1,099</price>
+            </hamim1>
+        </span>
+        <img src="portrait-stunning-fashionable-woman-sitting-chair.jpg" alt="" class="tpics">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">SELFS</hamim> <br>
+            <hamim1>Starting at Just <price>299</price>
+            </hamim1>
+        </span>
+        <img src="full-shot-woman-working-with-flowers.jpg" alt="" class="tpics">
+        <span>
+            <hamim style="font-size: 30px;  font-weight: bold;">FLOWERS</hamim> <br>
+            <hamim1>Starting at Just <price>199</price>
+            </hamim1>
+        </span>
+        <img src="decorative-pom-poms-used-decorative-vase.jpg" alt="" class="tpics">
+
+
+
+
+    </div>
+
+    <div class="catagory">
+        <p class="txt3">SHOP BY CATAGORY</p>
+    </div>
+    <div class="cata-pics">
+        <span class="txt4">COAT</span>
+        <img src="Picsart_23-06-20_20-50-29-814.jpg" alt="" class="cpics">
+        <span class="txt4">LAHNAGA</span>
+        <img src="Picsart_23-06-20_20-33-09-806.jpg" alt="" class="cpics">
+        <span class="txt4">T-SHIRTS</span>
+        <img src="Picsart_23-06-20_20-47-23-077.jpg" alt="" class="cpics">
+        <span class="txt4">T-SHIRTS</span>
+        <img src="Picsart_23-06-20_20-47-54-976.jpg" alt="" class="cpics">
+        <span class="txt4">SHIRTS</span>
+        <img src="Picsart_23-06-20_20-48-20-670.png" alt="" class="cpics">
+        <span class="txt4" style="padding-left: -10px; font-size: 16px;">WINTER-WEAR</span>
+        <img src="Picsart_23-06-20_20-48-46-007.jpg" alt="" class="cpics">
+        <span class="txt4">T-SHIRTS</span>
+        <img src="Picsart_23-06-20_20-49-06-139.jpg" alt="" class="cpics">
+        <img src="Picsart_23-06-20_20-49-27-987.jpg" alt="" class="cpics">
+        <span class="txt4">SHIRTS</span>
+        <img src="Picsart_23-06-20_20-49-48-411.png" alt="" class="cpics">
+        <span class="txt4">T-SHIRTS</span>
+        <img src="Picsart_23-06-20_20-50-06-619.jpg" alt="" class="cpics">
+        <span class="txt4"> SHERWANI</span>
+        <img src="Picsart_23-06-20_20-50-49-896.jpg" alt="" class="cpics">
+        <span class="txt4">COAT</span>
+        <img src="Picsart_23-06-20_20-51-16-431.jpg" alt="" class="cpics">
+        <span class="txt4"> FLOWER POT</span>
+        <img src="Picsart_23-06-20_20-52-44-939.jpg" alt="" class="cpics">
+        <span class="txt4">CHAIR</span>
+        <img src="Picsart_23-06-20_20-52-32-823.jpg" alt="" class="cpics">
+        <span class="txt4" style="margin-left: -1330px;">SHIRTS</span>
+    </div>
+    <footer>
+        <div class="online">
+            <div class="ftxt1">
+                <p class="oshopping">ONLINE SHOPPING</p>
+                <ul>
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>Kids</li>
+                    <li>Home & Living</li>
+                    <li>Gift Cards</li>
+                    <li>Clothe's Duniya Insider</li>
+                </ul>
+            </div>
+            <div class="ftxt2">
+                <p class="customer"> CUSTOMER POLICIES</p>
+
+                <ul>
+                    <li>Contact Us</li>
+                    <li>FAQ</li>
+                    <li>T&C</li>
+                    <li>Terms Of Use</li>
+                    <li>Track Orders</li>
+                    <li>Shipping</li>
+                    <li>Returns</li>
+                    <li>Privacy policy</li>
+                </ul>
+            </div>
+
+            <div class="ftxt3">
+                <p class="original">100% ORIGINAL <span>guarantee for all products at clothe's_duniya.com</span></p>
+                <p class="return">Return Within 14days <span>of receving your order</span></p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+<script>
+    var countDownDate = new Date("Jun 20, 2025 23:59:59").getTime();
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s Left";
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+    //..........................
+    let imageAnim = document.getElementById("image-animate");
+
+    let imageArray = [
+        "IMG_20230619_161135.jpg",
+        "IMG_20230619_161248.jpg",
+        "IMG_20230619_161347.jpg",
+        "IMG_20230619_161436.jpg",
+        "IMG_20230619_161506.jpg"
+    ]
+
+    let imageIndex = 0;
+
+    const startImage = () => {
+        imageAnim.setAttribute("src", imageArray[imageIndex]);
+        imageIndex++;
+        if (imageIndex >= imageArray.length) {
+            imageIndex = 0;
+        }
+    }
+
+    setInterval(startImage, 2000);
+
+</script>
+
+</html> -->
